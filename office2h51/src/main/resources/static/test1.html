@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+    <style>
+        body{ text-align:center}
+        .div{ margin:0 auto; width:400px; height:100px; border:1px solid #100}
+    </style>
+    <script>
+        $(document).ready(function(){
+        $("button").click(function () {
+                var id=$("#1").val();
+                var type=$("#2").val();
+                var url=$("#3").val();
+                var href="viewer.html?id="+id+"&type="+type+"&url="+url;
+//                self.location=href;
+//            window.location.href=href;
+            window.open(href);
+            });
+        });
+
+
+
+
+    </script>
+</head>
+<body>
+<div >
+
+    <div>
+        <label>输入id:</label>
+        <div><input id="1" type="text" ></div>
+    </div>
+    <div>
+        <label>输入type如(ppt,xlsx,docx):</label>
+        <div><input id="2" type="text" ></div>
+    </div>
+    <div>
+        <label>输入url:</label>
+        <div><input id="3" type="text" ></div>
+    </div>
+    <button  >点我一下你就知道</button>
+</div>
+
+</body>
+</html>

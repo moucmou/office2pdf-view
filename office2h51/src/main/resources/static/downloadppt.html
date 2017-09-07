@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            var max=20;
+            for(var i=1;i<max;i++){
+                $.post({
+                    url:"down?id="+i+"&type=pptx&url=http://ou3n7albf.bkt.clouddn.com/f0b05ac1358a47cda2864809dcf151e4.pptx",
+                    success:function(result){
+                        $("#1").append("<p>当前文档下载："+result+"</p>");
+                    }
+                });
+            }
+        });
+    </script>
+</head>
+<body>
+<div id="1"></div>
+</body>
+</html>
